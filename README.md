@@ -1,4 +1,4 @@
-# Kavin-s-Sticky-Note-App
+# Kavin's-Sticky-Note-App
 This is my Sticky Note app
 
 This app has:

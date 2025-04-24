@@ -1,8 +1,13 @@
 # Kavin's-Sticky-Note-App
-This is my Sticky Note app
+
+# What is this code and why did it make it?
+This is my Sticky Note app, I made this for my intro to software development class and when told what kind of this I could make as the final project I instantly thought of a sticky note app. 
+
+# Who is this for?
+This was made for anyone who can run it really, it is simple to use and all of the buttons are self explainitory as well as having a well known concept as a base.
 
 # Why are there two files?
-The file that has test in its name was the original file that I had started just to get the base of the app down and the file without test in its name is the actual project.
+The file that has test in its name was the original file that I had started just to get the base of the app down it is small and slimmed down and is relitivly simple and the file without test in its name is the actual project.
 
 # Features
 1. A space to put text

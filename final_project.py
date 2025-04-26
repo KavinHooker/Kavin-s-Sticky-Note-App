@@ -114,7 +114,7 @@ class StickyNoteApp:
             self.text_area.insert(tk.END, self.pages.get(self.page_number, ""))
             self.update_page_color()
         else:
-            messagebox.showinfo("Info", "You're already on the first page.")
+            messagebox.showinfo("You can\'t do that", "You're already on the first page.")
 
     def next_page(self):
         #Go to the next page

@@ -1,4 +1,11 @@
+'''
+Filename: final_project.py
 
+Purpose: To make an attempt at my first GUI program. This is a sticky note app that (to the best of my abilities)
+that works kinda like a real sticky note pad.
+
+Author: Kavin Hooker
+'''
 import tkinter as tk
 from tkinter import messagebox
 import tkinter.simpledialog as simpledialog

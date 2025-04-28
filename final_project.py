@@ -15,37 +15,37 @@ class StickyNoteApp:
         self.root = root
         self.root.title("Sticky Note")
 
-        # Track the page number and names
+        # Tracsk the page number and names
         self.page_number = 1
         self.pages = {}
         self.page_names = {self.page_number: "Page 1"}  # Store page names
 
-        # Set the size of the sticky note window
+        # Sets the size of the sticky note window
         self.root.geometry("500x400")
         self.root.resizable(False, False)
 
-        # Create a Frame to hold the entire content and set a gray border for the window
+        # Creates a Frame to hold the entire content and set a gray border for the window
         self.window_frame = tk.Frame(self.root, bg='gray', bd=10)  # Gray border with padding 10
         self.window_frame.pack(fill=tk.BOTH, expand=True)
 
-        # To make the window movable
+        # Makes the window movable
         self.is_moving = False
         self.offset_x = 0
         self.offset_y = 0
 
-        # Create a frame to hold the text area and buttons
+        # Creates a frame to hold the text area and buttons
         self.main_frame = tk.Frame(self.window_frame)
         self.main_frame.pack(fill=tk.BOTH, expand=True)
 
-        # Create a Text widget for writing
+        # Creates a Text widget for writing
         self.text_area = tk.Text(self.main_frame, wrap=tk.WORD, height=15, width=30)
         self.text_area.grid(row=0, column=0, padx=10, pady=10)
 
-        # Create a frame for the buttons to the right of the text area
+        # Creates a frame for the buttons to the right of the text area
         self.button_frame = tk.Frame(self.main_frame)
         self.button_frame.grid(row=0, column=1, padx=10, pady=10)
 
-        # Create buttons
+        # Creates buttons
         self.toggle_button = tk.Button(self.button_frame, text="Toggle Dark Mode", command=self.toggle_dark_mode)
         self.toggle_button.pack(fill=tk.X, pady=5)
 
@@ -64,36 +64,36 @@ class StickyNoteApp:
         self.rename_button = tk.Button(self.button_frame, text="Rename Page", command=self.rename_page)
         self.rename_button.pack(fill=tk.X, pady=5)
 
-        # Create a simple menu to store pages
+        # Creates a simple menu to store pages
         self.pages[self.page_number] = ""
 
-        # Bind mouse events to make window movable
+        # Binds mouse events to make window movable
         self.root.bind("<Button-1>", self.start_move)
         self.root.bind("<B1-Motion>", self.do_move)
         self.root.bind("<ButtonRelease-1>", self.stop_move)
 
-        # Apply the initial page color
+        # Applies the initial page color
         self.update_page_color()
 
     def start_move(self, event):
-        #Initiate dragging
+        # Initiates dragging
         self.is_moving = True
         self.offset_x = event.x
         self.offset_y = event.y
 
     def do_move(self, event):
-        #Move window while dragging
+        # Moves window while dragging
         if self.is_moving:
             delta_x = event.x - self.offset_x
             delta_y = event.y - self.offset_y
             self.root.geometry(f'+{self.root.winfo_x() + delta_x}+{self.root.winfo_y() + delta_y}')
 
     def stop_move(self, event):
-        #Stop dragging
+        # Stops dragging
         self.is_moving = False
 
     def toggle_dark_mode(self):
-        #Toggle between dark and light mode
+        # Toggles between dark and light mode
         current_bg = self.root.cget('background')
         if current_bg == 'black':
             self.root.configure(background='white')
@@ -113,7 +113,7 @@ class StickyNoteApp:
             self.rename_button.configure(bg='dark gray', fg='white')
 
     def previous_page(self):
-        #Go to the previous page
+        # Goes to the previous page
         if self.page_number > 1:
             self.pages[self.page_number] = self.text_area.get(1.0, tk.END).strip()
             self.page_number -= 1
@@ -124,7 +124,7 @@ class StickyNoteApp:
             messagebox.showinfo("You can\'t do that", "You're already on the first page.")
 
     def next_page(self):
-        #Go to the next page
+        # Goes to the next page
         self.pages[self.page_number] = self.text_area.get(1.0, tk.END).strip()
         self.page_number += 1
         self.text_area.delete(1.0, tk.END)
@@ -132,20 +132,20 @@ class StickyNoteApp:
         self.update_page_color()
 
     def rip_off_page(self):
-        #Rip off the current page into a new movable window
-        # Create a new top-level window for the ripped-off sticky note
+        # Rips off the current page into a new movable window
+        # Creates a new top-level window for the ripped-off sticky note
         ripoff_window = tk.Toplevel(self.root)
         ripoff_window.title(f"{self.page_names.get(self.page_number)} - {self.page_number}")
 
-        # Set the size of the new window
+        # Sets the size of the new window
         ripoff_window.geometry("300x400")
         ripoff_window.resizable(False, False)
 
-        # Create a Text widget for writing in the new window
+        # Creates a Text widget for writing in the new window
         ripoff_text_area = tk.Text(ripoff_window, wrap=tk.WORD, height=15, width=30)
         ripoff_text_area.pack(padx=10, pady=10)
 
-        # Insert the content of the current page into the ripoff window
+        # Inserts the content of the current page into the ripoff window
         ripoff_text_area.insert(tk.END, self.text_area.get(1.0, tk.END).strip())
 
         # To make the new window movable
@@ -154,29 +154,29 @@ class StickyNoteApp:
         ripoff_window.offset_y = 0
 
         def start_move_ripoff(event):
-            #Initiate dragging for the ripoff window
+            #Initiates dragging for the ripoff window
             ripoff_window.is_moving = True
             ripoff_window.offset_x = event.x
             ripoff_window.offset_y = event.y
 
         def do_move_ripoff(event):
-            #Move the ripoff window while dragging
+            # Move the ripoff window while dragging
             if ripoff_window.is_moving:
                 delta_x = event.x - ripoff_window.offset_x
                 delta_y = event.y - ripoff_window.offset_y
                 ripoff_window.geometry(f'+{ripoff_window.winfo_x() + delta_x}+{ripoff_window.winfo_y() + delta_y}')
 
         def stop_move_ripoff(event):
-            #Stop dragging
+            # Stop dragging
             ripoff_window.is_moving = False
 
-        # Bind mouse events to the ripoff window to make it draggable
+        # Binds mouse events to the ripoff window to make it draggable
         ripoff_window.bind("<Button-1>", start_move_ripoff)
         ripoff_window.bind("<B1-Motion>", do_move_ripoff)
         ripoff_window.bind("<ButtonRelease-1>", stop_move_ripoff)
 
     def rename_page(self):
-        #Prompt the user to rename the current page
+        # Prompts the user to rename the current page
         new_name = simpledialog.askstring("Rename Page", f"Enter a new name for {self.page_names.get(self.page_number, 'Page')}:")
 
         if new_name:
@@ -184,7 +184,7 @@ class StickyNoteApp:
             self.root.title(f"Sticky Note - {new_name}")
 
     def update_page_color(self):
-        #Update the background color of the current page
+        # Updates the background color of the current page
         color = self.root.cget('background')  # Get current window color
         self.text_area.configure(bg=color)
 

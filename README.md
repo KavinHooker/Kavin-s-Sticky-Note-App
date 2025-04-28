@@ -1,7 +1,7 @@
 # Kavin's-Sticky-Note-App
 
 # What is this code and why did it make it?
-This is my Sticky Note app, I made this for my intro to software development class and when told what kind of this I could make as the final project I instantly thought of a sticky note app.  This is my first attempt at anything related to making a GUI but I think that it has turned out pretty good for a first attempt.
+This is my Sticky Note app, I made this for my intro to software development class and when told what kind of this I could make as the final project I instantly thought of a sticky note app. This is my first attempt at anything related to making a GUI but I think that it has turned out pretty good for a first attempt.
 
 # Who is this for?
 This was made for anyone who can run it really, it is simple to use and all of the buttons are self explainitory as well as having a well known concept as a base.
@@ -20,7 +20,7 @@ This app has no way to save the contents of it at this point and you wll lose al
 
 # How each button works
 **Dark mode**: Does exactly what you think it does, when clicked it changes the back ground and buttons to black and dark gray respectively and can be be untoggled just by clicking it again.
-(Doesn't extend to the ripped off pages.
+(Doesn't extend to the ripped off pages)
 
 ![image](https://github.com/user-attachments/assets/51172936-d455-4f3c-8bdd-fc4ace5bfc21)
 

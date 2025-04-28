@@ -18,7 +18,7 @@ This app has no way to save the contents of it at this point and you wll lose al
 3. A button to rip off a page (Makes a new window)
 4. A darkmode toggle (Doesn't carry over to the rippped off pages)
 
-# How each button works (Explaination)
+# How each button works
 **Dark mode**: Does exactly what you think it does, when clicked it changes the back ground and buttons to black and dark gray respectively and can be be untoggled just by clicking it again.
 
 ![image](https://github.com/user-attachments/assets/51172936-d455-4f3c-8bdd-fc4ace5bfc21)

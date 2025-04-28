@@ -20,13 +20,14 @@ This app has no way to save the contents of it at this point and you wll lose al
 
 # How each button works
 **Dark mode**: Does exactly what you think it does, when clicked it changes the back ground and buttons to black and dark gray respectively and can be be untoggled just by clicking it again.
+(Doesn't extend to the ripped off pages.
 
 ![image](https://github.com/user-attachments/assets/51172936-d455-4f3c-8bdd-fc4ace5bfc21)
 
 
 **Previous and Next arrows**: Flip through the pages, the pages will keep what you typed in them unfil you delete what is in them or close the app.
 
-**Rip Off**: Tries to mimic the functionallity if how you would actualy rip off a sticky note in real life, it does this by making a new window that can be moved and controled seperately from the main program. The text in the note can be modified while it is seperated but you can not rename the note once it hasbeen "ripped off".
+**Rip Off**: Tries to mimic the functionallity if how you would actualy rip off a sticky note in real life, it does this by making a new window that can be moved and controled seperately from the main program. The text in the note can be modified while it is seperated but you can not rename the note once it has been "ripped off".
 
 ![image](https://github.com/user-attachments/assets/38ef3d8a-c3e0-41dc-90cb-d4c6a16ef399)
 

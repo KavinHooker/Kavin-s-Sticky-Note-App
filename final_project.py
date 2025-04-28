@@ -49,15 +49,15 @@ class StickyNoteApp:
         self.toggle_button = tk.Button(self.button_frame, text="Toggle Dark Mode", command=self.toggle_dark_mode)
         self.toggle_button.pack(fill=tk.X, pady=5)
 
-        self.prev_button = tk.Button(self.button_frame, text="⬅️ Previous", font=("Arial", 12), command=self.previous_page)
+        self.prev_button = tk.Button(self.button_frame, text="\u2B05 Previous", font=("Arial", 12), command=self.previous_page)
         self.prev_button.pack(fill=tk.X, pady=5)
 
-        self.next_button = tk.Button(self.button_frame, text="➡️ Next        ", font=("Arial", 12), command=self.next_page)
+        self.next_button = tk.Button(self.button_frame, text="\u27A1 Next        ", font=("Arial", 12), command=self.next_page)
         self.next_button.pack(fill=tk.X, pady=5)
 
 
         # Rip off page button
-        self.ripoff_button = tk.Button(self.button_frame, text="✂️ Rip off page", font=("Arial", 12), command=self.rip_off_page)
+        self.ripoff_button = tk.Button(self.button_frame, text="\u2702 Rip off page", font=("Arial", 12), command=self.rip_off_page)
         self.ripoff_button.pack(fill=tk.X, pady=5)
 
         # Rename page button

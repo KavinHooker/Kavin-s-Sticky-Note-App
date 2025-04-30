@@ -1,5 +1,5 @@
 '''
-Filename: final_project.py
+Filename: 
 
 Purpose: To make an attempt at my first GUI program. This is a sticky note app that (to the best of my abilities)
 that works kinda like a real sticky note pad.
@@ -15,7 +15,7 @@ class StickyNoteApp:
         self.root = root
         self.root.title("Sticky Note")
 
-        # Tracsk the page number and names
+        # Tracks the page number and names
         self.page_number = 1
         self.pages = {}
         self.page_names = {self.page_number: "Page 1"}  # Store page names

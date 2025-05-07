@@ -25,12 +25,12 @@ This app has no way to save the contents of it at this point and you wll lose al
 
 **Rip Off**: Tries to mimic the functionallity if how you would actualy rip off a sticky note in real life, it does this by making a new window that can be moved and controled seperately from the main program. The text in the note can be modified while it is seperated but you can not rename the note once it hasbeen "ripped off".
 
+**Rename**: Lets you rename the page that it is useed on. I still haven't found a way to make it so that it doesn't change the name of the program when a new one is entered but, all name are remembered and if you rip off a page that has been renamedthen the name that was given to it will be the anme of the window making it easier to identify what note is what while hovering over its icon on the task bar.
+
+![image](https://github.com/user-attachments/assets/26f05d02-725d-4031-a654-8f0496590ded)
+
+
 **Validation/ Error Checking**: At the moment I have only thought of one problem and that is if someone tries to click previous page when they are still on the first page, this might enable someone to get outside of the se parameters and so I made an error message for that.
 
 ![image](https://github.com/user-attachments/assets/f8fdea36-7763-46fa-8a54-1d0087a005bb)
 
-
-
-**Rename**: Lets you rename the page that it is useed on. I still haven't found a way to make it so that it doesn't change the name of the program when a new one is entered but, all name are remembered and if you rip off a page that has been renamedthen the name that was given to it will be the anme of the window making it easier to identify what note is what while hovering over its icon on the task bar.
-
-![image](https://github.com/user-attachments/assets/26f05d02-725d-4031-a654-8f0496590ded)

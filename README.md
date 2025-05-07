@@ -30,7 +30,8 @@ This app has no way to save the contents of it at this point and you wll lose al
 ![image](https://github.com/user-attachments/assets/26f05d02-725d-4031-a654-8f0496590ded)
 
 
-**Validation/ Error Checking**: At the moment I have only thought of one problem and that is if someone tries to click previous page when they are still on the first page, this might enable someone to get outside of the se parameters and so I made an error message for that.
+#Validation/ Error Checking
+At the moment I have only thought of one problem and that is if someone tries to click previous page when they are still on the first page, this might enable someone to get outside of the se parameters and so I made an error message for that.
 
 ![image](https://github.com/user-attachments/assets/f8fdea36-7763-46fa-8a54-1d0087a005bb)
 
